@@ -228,12 +228,18 @@
       }
 
       function drawFingertips(hand, gx, gy) {
-        [4, 8, 12, 16, 20].forEach(idx => {
+        for (let idx = 0; idx < hand.keypoints.length; idx++) {
           let k = hand.keypoints[idx];
           let x = map(k.x, 0, 640, 0, width) + gx, y = map(k.y, 0, 480, 0, height) + gy;
-          noFill(); stroke(255, 180); circle(x, y, 12);
-          fill(255, 150); textSize(9); text(`ID:${idx}`, x+15, y-10);
-        });
+          
+          // 使用 HSL 色相環從 0 到 360，讓每顆點顏色涵蓋整個光譜
+          let hue = Math.floor((idx * 360) / hand.keypoints.length);
+          fill(color(`hsl(${hue}, 100%, 60%)`));
+          noStroke();
+          circle(x, y, 20); // 放大座標點
+          
+          fill(255, 180); textSize(11); text(`ID:${idx}`, x+18, y-12);
+        }
       }
 
       function drawVirtualButtons(gx, gy) {
