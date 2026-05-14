@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>木暮公延：平凡英雄的價值分析 - 主題探索報告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        shohoku: {
+                            red: '#BE123C',
+                            dark: '#881337',
+                            gold: '#FDE047',
+                            black: '#111827',
+                        },
+                        glass: 'rgba(255, 255, 255, 0.05)',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(23, 23, 23, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #fb7185, #f43f5e, #be123c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .red-glow {
+            box-shadow: 0 0 20px rgba(190, 18, 60, 0.3);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #be123c;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Hero Section with Header Info -->
+    <header class="relative min-h-[40vh] flex flex-col items-center justify-center text-center px-4 pt-12 pb-20 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-shohoku-red/20 via-transparent to-transparent opacity-50 pointer-events-none"></div>
+        
+        <div class="z-10 animate-float">
+            <span class="inline-block px-4 py-1 rounded-full border border-shohoku-red text-shohoku-red text-sm font-bold tracking-widest mb-4">STUDENT ID: M11309930</span>
+            <h1 class="text-5xl md:text-7xl font-display font-black mb-4 tracking-tighter">
+                木暮公延 <span class="text-gradient">KOGURE</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+                平凡英雄的價值分析與角色回顧：湘北隊最堅韌的「潤滑劑」
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-6xl pb-24">
+        
+        <!-- 1. Infographic Top (資訊圖表置頂) -->
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-shohoku-red to-transparent"></div>
+                <h2 class="text-2xl font-display font-bold uppercase tracking-widest text-shohoku-red">Infographic</h2>
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-shohoku-red to-transparent"></div>
+            </div>
+            
+            <div class="glass-card rounded-3xl p-2 md:p-4 transition-transform duration-500 hover:scale-[1.01] red-glow">
+                <div class="rounded-2xl overflow-hidden aspect-video shadow-2xl">
+                    <img src='https://opal.google/board/blobs/7296549b-eeda-4d8a-b920-f4a86275bfc6' alt='木暮公延 角色資訊圖表' class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Video/Audio Middle (短影片置中) -->
+        <section class="mb-24 relative">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-shohoku-red to-transparent"></div>
+                <h2 class="text-2xl font-display font-bold uppercase tracking-widest text-shohoku-red">Visual Memory</h2>
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-shohoku-red to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Video Container -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card rounded-3xl p-3 overflow-hidden shadow-2xl relative group">
+                        <div class="rounded-2xl overflow-hidden aspect-video bg-black relative">
+                            <video src='https://opal.google/board/blobs/14bf1f1c-26a5-4bbb-9615-69e64ec4b5ae' alt='media_1' class="w-full h-full object-cover" controls playsinline></video>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio & Context -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card p-8 rounded-3xl">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <span class="w-2 h-8 bg-shohoku-red mr-4 block"></span>
+                            推薦背景音樂
+                        </h3>
+                        <div class="bg-black/40 p-4 rounded-2xl border border-white/5 mb-6">
+                            <audio src='https://opal.google/board/blobs/a1de5447-e03e-4cb6-a016-74221705e030' alt='media_2' controls class="w-full"></audio>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed italic">
+                            「影片內容呈現了身穿 5 號球衣、戴著眼鏡的木暮在陽光灑落的籃球場上，完成一記關鍵投籃並露出溫暖微笑的瞬間，象徵著『平凡英雄』的努力與溫柔力量。」
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Report Bottom (報告置底) -->
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-shohoku-red to-transparent"></div>
+                <h2 class="text-2xl font-display font-bold uppercase tracking-widest text-shohoku-red">Deep Analysis</h2>
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent via-shohoku-red to-transparent"></div>
+            </div>
+
+            <!-- Abstract Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-shohoku-red">
+                    <h4 class="text-shohoku-red font-bold text-xs uppercase mb-2 tracking-widest">角色定位</h4>
+                    <p class="text-sm">湘北高中的副隊長，被譽為球隊唯一的「潤滑劑」與最強「第六人」。</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-gray-500">
+                    <h4 class="text-gray-400 font-bold text-xs uppercase mb-2 tracking-widest">性格特質</h4>
+                    <p class="text-sm">具備溫和、冷靜且堅韌的特質，與赤木隊長形成「嚴厲與包容」的互補。</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-shohoku-red">
+                    <h4 class="text-shohoku-red font-bold text-xs uppercase mb-2 tracking-widest">經典貢獻</h4>
+                    <p class="text-sm">對陣陵南投進關鍵三分球，象徵著「平凡人」長期努力的甜美果實。</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-gray-500">
+                    <h4 class="text-gray-400 font-bold text-xs uppercase mb-2 tracking-widest">現代價值</h4>
+                    <p class="text-sm">職場理想的「協調者」與「情緒支柱」，代表了多數人的英雄主義。</p>
+                </div>
+            </div>
+
+            <!-- Full Report Content -->
+            <div class="glass-card rounded-[2rem] p-8 md:p-16 space-y-12 shadow-inner">
+                
+                <div class="max-w-4xl mx-auto space-y-12 text-gray-300 leading-loose text-lg">
+                    
+                    <article>
+                        <h3 class="text-3xl font-display font-bold text-white mb-6 flex items-baseline">
+                            <span class="text-shohoku-red text-4xl mr-2">I.</span> 角色概述與團隊責任
+                        </h3>
+                        <p>
+                            木暮公延（Kiminobu Kogure）是經典籃球漫畫《灌籃高手》（Slam Dunk）中湘北高中（Shohoku High School）籃球隊的副隊長（Deputy Captain）。在天才雲集、充滿衝突的湘北隊中，他因常戴眼鏡而被主角櫻木花道親暱地稱為「眼鏡哥」（Meganekun）。雖然其體能天賦不及赤木剛憲（Takenori Akagi）或流川楓，但他憑藉穩定的心理素質與極高的球商，成為隊伍中最重要的第六人（Sixth Man）。
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-3xl font-display font-bold text-white mb-6 flex items-baseline">
+                            <span class="text-shohoku-red text-4xl mr-2">II.</span> 溫和的協調者：團隊中的情緒勞動
+                        </h3>
+                        <p>
+                            根據回顧性文獻分析，木暮的核心價值在於他成功扮演了「緩衝墊」的角色。早期的湘北隊因赤木的嚴厲領導而導致球員離隊潮，唯獨木暮堅持下來，與赤木並肩奮鬥三年。當櫻木、宮城、三井等問題球員加入時，木暮透過情感支持（Emotional Support）化解隊內的火藥味。
+                        </p>
+                        <p class="mt-4 border-l-4 border-shohoku-red pl-6 py-2 bg-white/5 italic">
+                            在「三井壽體育館事件」中，平日溫厚的木暮展現出驚人的勇氣，當面痛斥放棄夢想的三井，這場心理對峙被視為推動力，促成了三井的後悔與回歸。
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-3xl font-display font-bold text-white mb-6 flex items-baseline">
+                            <span class="text-shohoku-red text-4xl mr-2">III.</span> 經典時刻：對陵南戰的「回憶殺」
+                        </h3>
+                        <p>
+                            木暮在作品中最具代表性的時刻發生在全國大賽（Inter-High）預選賽決賽。面對陵南高中（Ryonan High School）時，對方教練田岡茂一因輕視木暮的威脅而採取包夾策略。然而，木暮在最後關頭投進了一記關鍵的三分球（Three-point shot），決定了比賽的勝負。
+                        </p>
+                        <p class="mt-4">
+                            文獻指出，這記在動畫中長達一集的回憶進球，完美體現了「平凡人的英雄主義」（Heroism of the Ordinary）。它向讀者證明：技術或天賦或許有高低之分，但三年的枯燥訓練與堅持，在決定性的契機下也能爆發出改變命運的力量。
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-3xl font-display font-bold text-white mb-6 flex items-baseline">
+                            <span class="text-shohoku-red text-4xl mr-2">IV.</span> 現代視視角：劇場版《THE FIRST SLAM DUNK》的刻畫
+                        </h3>
+                        <p>
+                            在 2022 年上映的劇場版（Movie / The First Slam Dunk）中，敘事視角轉向宮城良田，木暮的台詞雖大幅縮減，但其存在感依然強烈。評論家指出，劇場版透過細膩的 3DCG 技術捕捉木暮在場邊的每一處細節——無論是緊張的握拳、遞水的體貼，還是在關鍵時刻臨危授命上場穩定軍心的沉穩。
+                        </p>
+                    </article>
+
+                    <article class="bg-gradient-to-br from-shohoku-red/10 to-transparent p-8 rounded-2xl border border-shohoku-red/20">
+                        <h3 class="text-2xl font-bold text-shohoku-red mb-4 uppercase tracking-tighter italic">Conclusion / 結論</h3>
+                        <p class="text-white">
+                            木暮公延代表了運動競技中最溫柔的力量。他深知自己的平凡（Ordinary），卻選擇將平凡的技術磨練至極致，並在團隊分裂崩解時成為最強韌的黏結劑。他是讀者在職場或生活中最嚮往的夥伴類型：不爭光環，卻在需要時絕對可靠。木暮的存在，賦予了《灌籃高手》超越競技熱血、更具人性層次的人文關懷。
+                        </p>
+                    </article>
+
+                    <!-- References -->
+                    <div class="pt-12 border-t border-white/10">
+                        <h4 class="text-sm font-bold text-gray-500 uppercase tracking-[0.3em] mb-6">引用文獻與參考來源</h4>
+                        <ul class="text-xs space-y-3 text-gray-500 font-light">
+                            <li>1. 《經理人月刊》（2023）：「《灌籃高手》木暮公延：他不只是副隊長，更是湘北籃球隊不可或缺的『潤滑劑』」。</li>
+                            <li>2. 《關鍵評論網》（2022）：「木暮公延：平凡人的英雄主義，是《灌籃高手》中最溫柔的一道光」。</li>
+                            <li>3. 《遠見雜誌》專欄（2023）：「除了天才與怪物，我們更該看見木暮公延：論『二當家』在團隊中的情緒勞動」。</li>
+                            <li>4. 《Every Little d》影評（2023）：「《灌籃高手》電影版分析：在宮城的視角下，木暮公延為何依然是『最可靠的學長』？」。</li>
+                            <li>5. 《釀電影》（2023）：「致那些在場邊吶喊的人：從《THE FIRST SLAM DUNK》看木暮公延與湘北替補席的厚度」。</li>
+                            <li>6. 漫畫《灌籃高手》（Slam Dunk），井上雄彥 著。</li>
+                            <li>7. 電影《THE FIRST SLAM DUNK》（2022），東映動畫 出品。</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Centered Branding -->
+        <div class="flex flex-col items-center justify-center space-y-4 py-8">
+            <p class="text-lg font-medium text-gray-400">
+                【主題探索報告】by <i class="text-shohoku-red font-serif not-italic font-black text-xl ml-1">Eileen</i>
+            </p>
+        </div>
+    </main>
+
+    <!-- Bottom Indicator -->
+    <div class="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-shohoku-red via-shohoku-gold to-shohoku-red"></div>
+
+</body>
+</html>
