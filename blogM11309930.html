@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尖叫與魔法的集散地 - 動漫風部落格</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'anime-pink': '#FF7EB3',
+                        'anime-purple': '#8E54E9',
+                        'anime-blue': '#4CA1AF',
+                        'magic-yellow': '#FFD700',
+                        'dark-void': '#0F0C29',
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            'from': { 'text-shadow': '0 0 10px #FF7EB3, 0 0 20px #FF7EB3' },
+                            'to': { 'text-shadow': '0 0 20px #8E54E9, 0 0 30px #8E54E9' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F0C29;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+
+        .anime-gradient-text {
+            background: linear-gradient(to right, #FF7EB3, #FFD700, #8E54E9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-dot {
+            height: 12px;
+            width: 12px;
+            background-color: #FF7EB3;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 12px;
+            box-shadow: 0 0 15px #FF7EB3;
+        }
+
+        .bento-item {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .bento-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F0C29;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#FF7EB3, #8E54E9);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body leading-relaxed">
+
+    <!-- Floating Background Elements -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 opacity-30">
+        <div class="absolute top-10 left-10 w-64 h-64 bg-anime-pink rounded-full mix-blend-screen filter blur-[120px] animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-anime-purple rounded-full mix-blend-screen filter blur-[150px] animate-pulse-slow"></div>
+    </div>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16 relative">
+            <div class="inline-block px-4 py-1 rounded-full border border-anime-pink text-anime-pink text-sm font-bold tracking-widest mb-4 bg-anime-pink/10">
+                學號：M11309930
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black font-display mb-6 animate-glow leading-tight">
+                尖叫與魔法的<br><span class="anime-gradient-text">集散地</span>
+            </h1>
+            <p class="text-xl text-gray-400 font-medium">遊樂園背後的秘密與未來 — 夢想與現實的交界處</p>
+        </header>
+
+        <!-- Banner Image -->
+        <div class="relative w-full rounded-[40px] overflow-hidden mb-20 shadow-2xl shadow-anime-purple/30 group">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-void via-transparent to-transparent z-10 opacity-60"></div>
+            <div class="transform transition-transform duration-700 group-hover:scale-105">
+                <img src='https://opal.google/board/blobs/9b1ded54-5f1c-4db9-8094-ac40482ebb27' alt='Magical Theme Park Banner' class="w-full h-auto object-cover min-h-[400px]" />
+            </div>
+            <div class="absolute bottom-8 left-8 z-20">
+                <span class="bg-white/20 backdrop-blur-md px-6 py-2 rounded-full text-white font-bold border border-white/30">
+                    ✨ Welcome to the Dreamscape
+                </span>
+            </div>
+        </div>
+
+        <!-- Section 1: Introduction -->
+        <section class="glass-card p-8 md:p-12 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10">
+                <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4.5 20.29L5.21 21L12 18L18.79 21L19.5 20.29L12 2Z"/></svg>
+            </div>
+            <h2 class="text-3xl font-black mb-6 flex items-center">
+                <span class="section-dot"></span>
+                一、 引言：為什麼我們永遠對那扇大門沒有抵抗力？
+            </h2>
+            <div class="text-lg text-gray-200 space-y-6">
+                <p class="leading-relaxed">
+                    「各位貴賓請注意，魔法大門即將開啟……」當廣播聲伴隨著遠處雲霄飛車傳來的悶雷聲響，以及空氣中揮之不去的焦糖爆米花甜味，那一刻，無論你是一位西裝革履的金融精英，還是一位被生活磨平稜角的家長，都會在那扇大門前感到一種近乎本能的躁動。
+                </p>
+                <p class="border-l-4 border-anime-pink pl-6 italic text-gray-300">
+                    為什麼我們心願在烈日下排隊數小時？為什麼那些塑料感十足的裝飾能讓我們眼眶濕潤？遊樂園不僅僅是大型機械的堆砌，它是一場針對成年人設計的集體催眠，一個讓我們能理直氣壯暫停現實生活的「異空間」。
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Four Kings of Happiness (Bento Grid) -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-black mb-10 flex items-center">
+                <span class="section-dot"></span>
+                二、 拆解快樂：遊樂園的四大要素
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="md:col-span-2 glass-card p-8 bento-item bg-gradient-to-br from-anime-pink/20 to-transparent">
+                    <div class="text-4xl mb-4">🎢</div>
+                    <h3 class="text-2xl font-bold mb-3">機械猛獸</h3>
+                    <p class="text-gray-300">這是園區的靈魂。從旋轉木馬到重力挑戰的雲霄飛車。在極速墜落中找回生存的實感。</p>
+                </div>
+                <div class="md:col-span-2 glass-card p-8 bento-item bg-gradient-to-br from-anime-purple/20 to-transparent">
+                    <div class="text-4xl mb-4">🪄</div>
+                    <h3 class="text-2xl font-bold mb-3">夢想濾鏡</h3>
+                    <p class="text-gray-300">極致的空間藝術。透過景觀、裝束與音效，成功在地球表面切割出一塊塊異世界。</p>
+                </div>
+                <div class="md:col-span-1 glass-card p-8 bento-item">
+                    <div class="text-4xl mb-4">🎉</div>
+                    <h3 class="text-xl font-bold mb-3">華麗派對</h3>
+                    <p class="text-sm text-gray-400">花車巡遊是高潮。與 IP 明星擊掌，大腦分泌多巴胺，忘記腳底酸痛。</p>
+                </div>
+                <div class="md:col-span-3 glass-card p-8 bento-item flex flex-col md:flex-row items-center gap-6">
+                    <div class="text-4xl">🍔</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">補給基地</h3>
+                        <p class="text-gray-400 text-sm">不只是填飽肚子，而是體驗的一環。造型奇特的角色包子與沉浸式主題餐廳，構建全方位的真空生活圈。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: History Timeline -->
+        <section class="mb-20 relative">
+            <h2 class="text-3xl font-black mb-12 flex items-center">
+                <span class="section-dot"></span>
+                三、 時光機：進化史
+            </h2>
+            <div class="space-y-12">
+                <div class="relative pl-12 border-l-2 border-dashed border-anime-blue/50">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-anime-blue shadow-[0_0_10px_#4CA1AF]"></div>
+                    <div class="glass-card p-6 transform transition-all hover:translate-x-2">
+                        <span class="text-anime-blue font-black text-sm uppercase tracking-widest">起源篇 (15-18世紀)</span>
+                        <h4 class="text-2xl font-bold mt-2 mb-3 text-white">歐洲大集市與聖泉</h4>
+                        <p class="text-gray-400">丹麥誕生了世界上最古老的「柏根遊樂園」。圍繞聖泉看雜耍與原始旋轉設施，是人類狂歡的雛形。</p>
+                    </div>
+                </div>
+                <div class="relative pl-12 border-l-2 border-dashed border-anime-purple/50">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-anime-purple shadow-[0_0_10px_#8E54E9]"></div>
+                    <div class="glass-card p-6 transform transition-all hover:translate-x-2">
+                        <span class="text-anime-purple font-black text-sm uppercase tracking-widest">工業狂歡篇 (1893)</span>
+                        <h4 class="text-2xl font-bold mt-2 mb-3 text-white">鋼鐵與蒸汽的浪漫</h4>
+                        <p class="text-gray-400">芝加哥世博會誕生了第一座摩天輪。紐約康尼島興起，正式將遊樂園與現代都市休閒掛鉤。</p>
+                    </div>
+                </div>
+                <div class="relative pl-12 border-l-2 border-dashed border-anime-pink/50">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-anime-pink shadow-[0_0_10px_#FF7EB3]"></div>
+                    <div class="glass-card p-6 transform transition-all hover:translate-x-2">
+                        <span class="text-anime-pink font-black text-sm uppercase tracking-widest">魔法革命篇 (1955)</span>
+                        <h4 class="text-2xl font-bold mt-2 mb-3 text-white">迪士尼的敘事魔法</h4>
+                        <p class="text-gray-400">華特·迪士尼改變規則，引入「Storytelling」。證明了人們不只是為了坐車，而是為了成為故事的一部分。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 & 5: Psychology & Reality -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            <section class="glass-card p-8 border-t-4 border-magic-yellow">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <span class="text-magic-yellow mr-3">✦</span> 四、 現實逃避主義
+                </h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    遊樂園是人類最強大的「安全區」。在這裡，尖叫是被允許的，幼稚是被鼓勵的。
+                </p>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/10 italic text-sm text-gray-400">
+                    透過數位技術與 MR 的加持，遊客不再是旁觀者，而是與心愛的角色並肩作戰的英雄。
+                </div>
+            </section>
+            <section class="glass-card p-8 border-t-4 border-red-500">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <span class="text-red-500 mr-3">✖</span> 五、 歡樂背後的代價
+                </h2>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <span class="bg-red-500/20 text-red-500 px-2 py-1 rounded text-xs font-bold uppercase">Queue</span>
+                        <span><b>排隊階級：</b> 快速通關創造了「金錢買時間」的社會縮影。</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="bg-red-500/20 text-red-500 px-2 py-1 rounded text-xs font-bold uppercase">Price</span>
+                        <span><b>荷包哀嚎：</b> 票價與溢價餐飲，成為了中產階級的輕奢消費。</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="bg-red-500/20 text-red-500 px-2 py-1 rounded text-xs font-bold uppercase">Ethics</span>
+                        <span><b>動保覺醒：</b> 動物表演面臨道德挑戰，轉向保育與數位模擬。</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Section 6: Future -->
+        <section class="mb-20 glass-card p-8 md:p-12 bg-gradient-to-r from-dark-void to-anime-purple/10 border-none shadow-[0_0_50px_rgba(142,84,233,0.2)]">
+            <h2 class="text-3xl font-black mb-10 flex items-center">
+                <span class="section-dot bg-magic-yellow shadow-magic-yellow"></span>
+                六、 穿越去未來：科技與幻境
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-anime-pink/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-anime-pink/30">
+                        <svg class="w-8 h-8 text-anime-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="font-bold mb-2">情緒感應 AI</h3>
+                    <p class="text-sm text-gray-400">雲霄飛車感知心率與情緒，自動調整車速增加刺激或溫柔節奏。</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-anime-blue/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-anime-blue/30">
+                        <svg class="w-8 h-8 text-anime-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-bold mb-2">元宇宙 AR</h3>
+                    <p class="text-sm text-gray-400">客廳即是樂園延伸，實體園區變身巨型解謎冒險現場。</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-magic-yellow/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-magic-yellow/30">
+                        <svg class="w-8 h-8 text-magic-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="font-bold mb-2">綠色螺旋</h3>
+                    <p class="text-sm text-gray-400">煞車能量轉化為電力，追求零塑膠，讓快樂不再是地球的負擔。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Conclusion -->
+        <footer class="text-center pb-12">
+            <h2 class="text-4xl font-black mb-8 anime-gradient-text">七、 結語：下一次出發是什麼時候？</h2>
+            <div class="max-w-2xl mx-auto glass-card p-10 relative overflow-hidden group">
+                <div class="absolute -right-8 -bottom-8 opacity-20 transform group-hover:rotate-12 transition-transform duration-500">
+                    <svg width="150" height="150" fill="white" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="text-xl leading-relaxed mb-8 relative z-10">
+                    人類對「快樂、奇蹟與連結」的渴望從未改變。我們之所以對那扇大門沒有抵抗力，是因為在那裡，我們能短暫地變回那個相信魔法的孩子。
+                </p>
+                <div class="h-px w-full bg-gradient-to-r from-transparent via-anime-pink to-transparent mb-8"></div>
+                <p class="font-bold text-anime-pink mb-4">💬 告訴我們你的故事</p>
+                <p class="text-gray-400 mb-8">你心目中最嚮往的遊樂園是哪一家？在評論區留下你的故事，讓我們一起重溫那份魔法！</p>
+                <button class="px-8 py-3 bg-gradient-to-r from-anime-pink to-anime-purple rounded-full font-bold shadow-lg hover:shadow-anime-pink/40 transition-all active:scale-95">
+                    分享我的魔法瞬間
+                </button>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Interactive JS for some micro-animations -->
+    <script>
+        // Smooth scroll for internal elements (if any)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a parallax effect to the banner on scroll
+        window.addEventListener('scroll', () => {
+            const banner = document.querySelector('.group img');
+            const scroll = window.pageYOffset;
+            banner.style.transform = `translateY(${scroll * 0.1}px) scale(${1 + scroll * 0.0002})`;
+        });
+    </script>
+</body>
+</html>
